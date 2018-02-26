@@ -1,4 +1,3 @@
-
 process.env["NTBA_FIX_319"] = 1;
 process.env["NTBA_FIX_319"] = 1;
 const Bot = require('node-telegram-bot-api');
@@ -8,6 +7,7 @@ const url = 'https://launchlibrary.net/1.3/launch';
 const trigger = '/mequieres';
 const trigger1 = 'Te quiero';
 const trigger2 = 'No te quiero';
+const direccion = '/direccion';
 const token = '547644896:AAHvXTQRmzXgGiEZjAM_m44YqrwmbumCqpA';
 const bot = new Bot(token, {polling: true});
 
@@ -29,4 +29,12 @@ bot.sendMessage(msg.chat.id, 'Elige una opcion:', {
   }
 
  )  };
+});
+
+bot.on('message', (msg) => {
+ if (msg.text.toString() === direccion) {
+
+bot.sendMessage(msg.chat.id, 'primer local primer centro comercial'
+
+ ) };
 });
