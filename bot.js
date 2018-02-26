@@ -5,7 +5,9 @@ const Bot = require('node-telegram-bot-api');
 const request = require('request');
 
 const url = 'https://launchlibrary.net/1.3/launch';
-const trigger = 'Me quieres';
+const trigger = '/mequieres';
+const trigger1 = 'Te quiero';
+const trigger2 = 'No te quiero';
 const token = '547644896:AAHvXTQRmzXgGiEZjAM_m44YqrwmbumCqpA';
 const bot = new Bot(token, {polling: true});
 
@@ -18,15 +20,13 @@ const prepareData = (body) => {
 
 bot.on('message', (msg) => {
  if (msg.text.toString() === trigger) {
-  return request(url, (err, resp, body) => {
-   bot.sendMessage(msg.chat.id, prepareData(body));
-  });
- }
 
-bot.sendMessage(msg.chat.id, 'Hi, do you want to travel?', {
+
+bot.sendMessage(msg.chat.id, 'Elige una opcion:', {
   reply_markup: {
-    keyboard: [[trigger], ['Bulk option']]
+    keyboard: [[trigger1], [trigger2]]
    }
   }
- );
+
+ )  };
 });
