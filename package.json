@@ -1,0 +1,23 @@
+{
+  "name": "facebooksvbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/herbertdubon/PrimerParcialADC.git"
+  },
+  "author": "hdubon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/herbertdubon/PrimerParcialADC/issues"
+  },
+  "homepage": "https://github.com/herbertdubon/PrimerParcialADC#readme",
+  "dependencies": {
+    "node-telegram-bot-api": "^0.30.0",
+    "telegram": "^0.2.0"
+  }
+}
