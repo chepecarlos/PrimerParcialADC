@@ -38,3 +38,11 @@ bot.sendMessage(msg.chat.id, 'primer local primer centro comercial'
 
  ) };
 });
+
+bot.on('message', function (msg) {
+  console.log(msg);
+  var id = msg.chat.id;
+  var echo = msg.text;
+
+  bot.sendMessage(id, 'Muy pronto lanzamiento bot');
+});
